@@ -25,7 +25,7 @@ export default function ARFlooringVisualizer() {
 
     // Floor Texture
     const textureLoader = new THREE.TextureLoader();
-    const floorTexture = textureLoader.load("/flooring_texture.jpg"); // Change to actual texture
+    const floorTexture = textureLoader.load("/flooring_texture.png"); // Change to actual texture
     const floorMaterial = new THREE.MeshBasicMaterial({ map: floorTexture });
     const floorGeometry = new THREE.PlaneGeometry(2, 2);
     const floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
