@@ -5,8 +5,8 @@ const ARFlooringVisualizer = () => {
     <div>
       <h1>AR Flooring Visualizer</h1>
       <model-viewer
-        src="https://YOUR_MODEL_URL.glb"
-        ios-src="https://YOUR_MODEL_URL.usdz"
+        src="/ImageToStl.com_carpet 04.glb"
+        ios-src="/uploads_files_3660386_usdz.usdz"
         alt="AR Flooring"
         ar
         ar-modes="scene-viewer quick-look"
