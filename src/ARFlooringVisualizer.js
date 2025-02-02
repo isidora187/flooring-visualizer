@@ -4,7 +4,7 @@ import "./styles.css";
 
 const flooringOptions = [
   { name: "Oak Wood", glb: "/flooring1.glb", usdz: "/flooring1.usdz" },
-  { name: "Dark Walnut", glb: "/flooring-walnut.glb", usdz: "/flooring-walnut.usdz" },
+  { name: "Dark Walnut", glb: "/parquet-oak.glb", usdz: "/parquet-oak.usdz" },
   { name: "Gray Tile", glb: "/flooring-gray.glb", usdz: "/flooring-gray.usdz" },
   { name: "Marble", glb: "/flooring-marble.glb", usdz: "/flooring-marble.usdz" },
   { name: "Classic Pine", glb: "/flooring-pine.glb", usdz: "/flooring-pine.usdz" },
