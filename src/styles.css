@@ -79,4 +79,39 @@ body {
       transform: translateX(-50%) translateY(0);
     }
   }
+  .visualizer-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
   
+  select {
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  .message-box {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
