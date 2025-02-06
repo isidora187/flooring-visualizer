@@ -55,63 +55,44 @@ body {
     }
   }
   
-  .message-box {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-50%) translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-  }
-  .visualizer-container {
+  .container {
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 20px;
   }
   
   select {
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
     margin: 10px;
+    border-radius: 5px;
   }
   
-  .message-box {
-    background: rgba(0, 0, 0, 0.8);
+  model-viewer {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ar-button {
+    background-color: #007aff;
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
     font-size: 16px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-50%) translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+  .legend-message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    background: rgba(0, 255, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
   }
+  
