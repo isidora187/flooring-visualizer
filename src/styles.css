@@ -1,98 +1,254 @@
-/* Global Styles */
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ec7834;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  /* Container for the Visualizer */
-  .visualizer-container {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-  }
-  
-  /* Flooring Selection Dropdown */
-  .flooring-selector {
+    background: #f60;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
-  
-  /* AR Button */
-  .ar-button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+  .nav-links.active {
+    display: flex;
   }
-  
-  .ar-button:hover {
-    background-color: #0056b3;
+}
+
+/* Model Viewer */
+.model-viewer {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ar-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.ar-button:hover {
+  background-color: #ec7834;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-code {
+  background: #eee;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.view-more {
+  background: #f60;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.view-more:hover {
+  background: #ec7834;
+}
+.floor-selector {
+  border: 4px solid;
+  border-image-source: linear-gradient(176deg, #ec7834, #ec7834, #333);
+  border-image-slice: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 8px; /* Optional for rounded corners */
+  padding: 10px;
+  background-color: #f4f4f4; /* Ensures contrast */
+  font-size: 16px;
+  color: #353535;
+  outline: none;
+}
+
+/* Model Viewer */
+.model-viewer {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0;
+}
+
+/* Selected Product Section */
+.selected-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.selected-product-image {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.selected-product-info {
+  text-align: left;
+}
+
+.product-code {
+  background: #eee;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.view-more {
+  background: #f60;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-more:hover {
+  background: #e55a00;
+}
+.watermark {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.6;
+}
+
+.watermark img {
+  width: 80px;
+}
+.infinite-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 15s linear infinite;
+}
+
+.carousel-image {
+  width: 200px; /* Adjust size */
+  height: auto;
+  margin-right: 20px; /* Space between images */
+}
+
+/* Fix Scrollbar Issue */
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbars */
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
   }
-  
-  /* Responsive Styling */
-  @media (max-width: 600px) {
-    .visualizer-container {
-      width: 95%;
-    }
+  to {
+    transform: translateX(-50%);
   }
-  
-  .container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  select {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 5px;
-  }
-  
-  model-viewer {
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .ar-button {
-    background-color: #007aff;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .legend-message {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    background: rgba(0, 255, 0, 0.2);
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
+}
+
