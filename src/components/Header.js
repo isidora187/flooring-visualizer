@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <header className="header">
       {/* Left: Contact Us */}
-      <a href="/contact" className="header-link desktop">Contact Us</a>
+      <a href="https://www.ars-domus.eu/kontakt/" className="header-link desktop"></a>
 
       {/* Center: Logo */}
       <img src="/logo-ars-domus110.png" alt="Ars Domus Logo" className="logo" />
 
       {/* Right: Products */}
-      <a href="/products" className="header-link desktop">Products</a>
+      <a href="https://www.ars-domus.eu" className="header-link desktop"></a>
 
       {/* Mobile Menu Button */}
       <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
@@ -24,8 +24,8 @@ const Header = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <nav className="mobile-menu">
-          <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
-          <a href="/products" onClick={() => setMenuOpen(false)}>Products</a>
+          <a href="/contact" onClick={() => setMenuOpen(false)}>Kontakt</a>
+          <a href="/products" onClick={() => setMenuOpen(false)}>Produkti</a>
         </nav>
       )}
     </header>
