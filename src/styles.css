@@ -66,7 +66,13 @@ body {
   margin: 20px 0;
   border-radius: 10px;
 }
-
+@media (max-width: 768px) {
+  .floor-selector {
+      font-size: 20px;
+      padding: 15px;
+      background-color: red;
+  }
+}
 .ar-button {
   background-color: #ec7834;;
   color: white;
@@ -257,8 +263,13 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.container{
+}
 .carousel-container {
+  max-width: 100%;
+  overflow: hidden;
   margin-top: 20px;
+  background-image: url("/public/wood-lines.svg");
 }
 .h1-styles {
   background: #d3cfc5;

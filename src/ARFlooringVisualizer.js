@@ -109,17 +109,14 @@ const ARFlooringVisualizer = () => {
       {/* Image Carousel */}
       
       <div className="carousel-container">
-      <h1 className="h1-styles">Naši projekti</h1>
-      <p className="">Nudimo tudi uslugo vgradnje talnih oblog, saj kakovostna tla potrebujejo kakovostno vgradnjo. Naša ekipa strokovnjakov bo poskrbela, da bo vaš laminat položen profesionalno in natančno, kar zagotavlja dolgotrajno zadovoljstvo z vašo novo talno oblogo</p>
+      <h1 className="h1-styling">Naši projekti</h1>
+      <p className="p-styling">Nudimo tudi uslugo vgradnje talnih oblog, saj kakovostna tla potrebujejo kakovostno vgradnjo. Naša ekipa strokovnjakov bo poskrbela, da bo vaš laminat položen profesionalno in natančno, kar zagotavlja dolgotrajno zadovoljstvo z vašo novo talno oblogo</p>
         <div className="carousel-track">
           {images.concat(images).map((src, index) => (
             <img key={index} src={src} alt={`Floor ${index + 1}`} className="carousel-image" />
           ))}
         </div>
       </div>
-    <div className={`social-text ${showText ? "visible" : ""}`}>
-        <h2>Find us on socials!</h2>
-      </div>  
       <Footer />
       
     </div>
