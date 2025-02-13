@@ -71,6 +71,9 @@ body {
       font-size: 20px;
       padding: 15px;
       background-color: red;
+      appearance: none; /* Removes default styling */
+      -webkit-appearance: none; /* Fix for Safari */
+      -moz-appearance: none;
   }
 }
 .ar-button {
